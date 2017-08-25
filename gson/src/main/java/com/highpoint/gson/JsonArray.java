@@ -377,4 +377,40 @@ public final class JsonArray extends JsonElement implements Iterable<JsonElement
   public int hashCode() {
     return elements.hashCode();
   }
+
+  /*****************************************************************************
+   * HighPoint functions to resolve PeopleSoft's issue with overloaded functions
+   *****************************************************************************/
+
+  public void addArray(JsonArray array) {
+    add(array);
+  }
+
+  public void addBoolean(boolean value) {
+    add(value);
+  }
+
+  public void addElement(JsonElement element) {
+    add(element);
+  }
+
+  public void addFloat(float value) {
+    add(value);
+  }
+
+  public void addInt(int value) {
+    add(value);
+  }
+
+  public void addNull() {
+    add(JsonNull.INSTANCE);
+  }
+
+  public void addObject(JsonObject object) {
+    add(object);
+  }
+
+  public void addString(String value) {
+    add(value);
+  }
 }

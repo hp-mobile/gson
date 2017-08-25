@@ -211,4 +211,40 @@ public final class JsonObject extends JsonElement {
   public int hashCode() {
     return members.hashCode();
   }
+
+  /*****************************************************************************
+   * HighPoint functions to resolve PeopleSoft's issue with overloaded functions
+   *****************************************************************************/
+
+  public void addArray(String property, JsonArray array) {
+    add(property, array);
+  }
+
+  public void addBoolean(String property, boolean value) {
+    addProperty(property, value);
+  }
+
+  public void addElement(String property, JsonElement element) {
+    add(property, element);
+  }
+
+  public void addFloat(String property, float value) {
+    addProperty(property, value);
+  }
+
+  public void addInt(String property, int value) {
+    addProperty(property, value);
+  }
+
+  public void addNull(String property) {
+    add(property, JsonNull.INSTANCE);
+  }
+
+  public void addObject(String property, JsonObject object) {
+    add(property, object);
+  }
+
+  public void addString(String property, String value) {
+    addProperty(property, value);
+  }
 }
